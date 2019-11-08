@@ -1,0 +1,28 @@
+<%- include parcial/headder.ejs -%>
+    
+
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Number</th>
+          </tr>
+        </thead>
+        <% Movie.forEach(function(post){%>
+       
+          <tr>
+            <th scope="row"><%= post.name %></th>
+            <td><%= post.email %></td>
+            <td><%= post.number %></td>
+            <td> <a href="/delete/<%= post._id%>" class="btn">X</a> </tr>
+          <% }) %>
+      </table> 
+   
+
+<h1></h1>
+<h1></h1>
+
+
+<%- include parcial/footer.ejs -%>
